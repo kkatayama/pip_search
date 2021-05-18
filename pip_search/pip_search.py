@@ -15,7 +15,7 @@ def search(query: str, pages: int):
     for page in range(1, pages):
         params = {'q': query, 'page': page}
         r = s.get(api_url, params=params)
-        soup = BeautifulSoup(r.text, 'html5lib')
+        soup = BeautifulSoup(r.text, 'html.parser')
         snippets += soup.select('a[class*="snippet"]')
         if not hasattr(s, 'start_url'):
             s.start_url = r.url.rsplit('&page', maxsplit=1).pop(0)
