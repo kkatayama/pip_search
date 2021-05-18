@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name='pip-search-color',
-    version='0.2.6',
+    version='0.2.7',
     author='Teddy Katayama',
     author_email='katayama@udel.edu',
     description='Wrapper for "pip search" with color and hyperlink features.',
